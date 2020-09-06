@@ -1,0 +1,13 @@
+﻿  mutithread.cpp
+e:\deskfile\file\candc++\candc++\mutithread.cpp(117): warning C4005: “NAME_LINE”: 宏重定义
+  e:\deskfile\file\candc++\candc++\mutithread.cpp(62): note: 参见“NAME_LINE”的前一个定义
+  mutithread1.cpp
+  product-consumer.cpp
+  TcpipClient.cpp
+  TcpipService.cpp
+e:\deskfile\file\candc++\candc++\tcpipservice.cpp(64): warning C4101: “ResBuf”: 未引用的局部变量
+  threads.cpp
+  正在生成代码
+  All 188 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  已完成代码的生成
+  MutiThreadAndClientServercommit.vcxproj -> E:\WorkTestCode\MutiThreadAndClientServercommit\x64\Release\MutiThreadAndClientServercommit.exe

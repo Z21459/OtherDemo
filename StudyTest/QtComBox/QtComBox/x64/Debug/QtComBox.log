@@ -1,0 +1,5 @@
+﻿  uic QtComBox.ui
+  QtComBox.cpp
+  main.cpp
+  moc_QtComBox.cpp
+  QtComBox.vcxproj -> E:\WorkTestCode\QtComBox\x64\Debug\QtComBox.exe

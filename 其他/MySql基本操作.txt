@@ -1,0 +1,63 @@
+数据库事务操作特性：原子性(一个事务中的所有操作要么全部完成，要么全部不完成，不会结束中间某个环节。在事务执行过程发生错误，会回滚到事务开始前的状态，就像这个事务重来没有执行过一样)、
+		一致性(在一个事务执行之前和执行之后数据库都必须处于一致性。如果事务成功完成，则运行结束后正常；反之，回滚到初始状态)、
+		隔离性(在并发环境中，当不同的事务同时操纵相同的数据时，每个事务都有各自的完整数据空间。)、
+		持久性(事务成功结束，它对数据库所做的更新就必需永久保存下)。
+
+
+两个表，进行数据库基本操作
+
+插入：
+指定字段：insert into 表名(字段1，字段2)values(值1, 值2);//插入多条为values(值1，值2)，(值1，值2)；
+不指定字段：insert into 表名 values(值1，值2，值3);
+其他：insert set 表名 set 字段1=值1, .....;
+
+更新：
+更新部分：update 表名 set 字段名1=值1,......where 条件表达(某字段 值)；
+更新全部：update 表名 set 字段名1 = 新值1；
+
+删除：
+删除部分数据：delete from 表名 where 条件表达式(某字段 值)；
+删除全部：delete from 表名；
+
+查找：
+单表：
+select * [字段1，...](*和字段冲突，只能保留一个)   from 表名   [where 条件表达式] [group by 字段名[having 条件表达式 2]] [order by 字段名[asc|desc]] [limit[offset]记录数]
+指定字段：select 字段1，字段2 from 表名；select id,name from student;
+不指定字段：select *from 表名； select *from student;
+条件查询：select 字段1，字段2，...from 表名 where 条件表达式(字段 值)；select id ,name from student where id =4;
+带in 关键字查找：select * [字段1，...](*和字段冲突，只能保留一个) from 表名 where 字段名 [not] in (元素1，...)  select id, grade from student where id in(1,2,3);
+带between和and：select * [字段1，...](*和字段冲突，只能保留一个) from 表名 where 字段名 [not] between 值1 and 值2； select id，name from student where id between 2 and 5；
+空值查找：select * [字段1，...](*和字段冲突，只能保留一个) from 表名 where 字段名 is[not] null； select id,name from student where name is not null;
+带distinct查找：select distinct 字段名 from 表名； select distinct  name from student；
+带link关键字查找：select * [字段1，...](*和字段冲突，只能保留一个) from 表名 where 字段名 [not] link‘匹配字符串’；select id,name from student where name link "s%";//s开头  或者s%h(s和h之间)
+带and多条件查找：select * [字段1，...](*和字段冲突，只能保留一个) from 表名 where 表达式1 and 表达式2....; select  id,name from student where id in(1,2) and name link "%ng";
+带or多条件查找：select * [字段1，...](*和字段冲突，只能保留一个) from 表名 where 表达式1 or 表达式2....; select id,name from student where id <3 or name link "s%";
+聚合查找： select count(*) from student;//统计多少天记录
+	select sum(grade)  from student;//某字段和
+	select avg(grade) from student；//某字段(列)平均值
+	select max(grade) from student;//某字段最大值  min(grade) 字段最小值
+查询结果排序：select 字段1，字段2...from 表名 order by 字段1[asc|desc], 字段2[asc | desc]; select *from student order by  grade asc,id desc;
+分组查询：select 字段1，字段2...from 表名 group by 字段1, 字段2，..... [having 条件表达式]; select *from student group by gender；
+group by和聚合一起：select count(*) ,gender from student group by gender;  select sum(grade),name from student group by grade having sum(grade)<300; select sum(grade),gender from student where gender = '男';
+使用limit限制条件：select  select 字段1，字段2...from 表名 limit [offset,] 记录数; select *from student order by grade desc limit 4,4;//第一个表示偏移量 第二个返回个数 从5开始返回4个数 
+ 
+
+多表：
+外键引入另一个表中的一列或者多列，被引用的列应该具有主键约束或唯一性约束。
+添加外键：alter table student[表名] add constraint Fk_ID foreign key(gid[外键字段]) references grade(id)[外表表名和主键字段]
+删除外键：alter table student drop foreign key EK_ID[外键名];
+关联表：多对一、多对多、一对多。
+添加数据：将学生表student和成绩表grade进行关联  insert into student(sid,sname,gid) values(1,'王'，1)；
+  	在grade表中查找‘一班’的id   ： select id from grade where name=‘一班’；
+	在student表中查找 gid = 1的学生，即‘一班学生’：select sname from student where gid = 1；
+删除关联表中数据的时候一定要删除从表数据  再删除主表数据。否则报错， ：delete from student where sname = ‘王’； delete from grade where id =1；
+
+连接查询：select *from 表1 cross join 表2； select *from student cross join grade；//可以查询两个表中所有数据组合。
+	内连接：select student.sname,grade.gname from grade join student on grade.gid = student.id;//只有两个表中id相同才会出现。
+	外连接：left join ：返回包括左表中的所有记录和右表中符合连接的记录。   
+	             right join：返回右表所有记录和左表符合连接的记录。select student.id ,student.sname,grade.name from student right join grade on student.id = grade.id; 
+	子查询:   in:   select *from student where id in (select id from grade where age =20);查询年龄为20的员工id；
+	             exists:    seletc *from student where exists (select id from grade where age>20);查询grade表中年龄大于20 有才查询student中所有记录
+	             any：   select *from student where id>any(select id from grade);//查询满足条件的学生 满足内层任意一个条件
+	             all： select* from student where id>all(select id from grade);//满足内层素有条件
+	             带比较符： select *from student where id =(select id from grade where name = 'wang');//

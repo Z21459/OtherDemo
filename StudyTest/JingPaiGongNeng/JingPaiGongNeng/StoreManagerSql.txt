@@ -1,0 +1,1 @@
+store_id  good_id  good_type  good_name good_count good_quality

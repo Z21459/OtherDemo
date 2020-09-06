@@ -1,0 +1,9 @@
+﻿  Sort.cpp
+c:\users\zoutaotao\desktop\sortalgorithm\sortalgorithm\sort.cpp(166): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+c:\users\zoutaotao\desktop\sortalgorithm\sortalgorithm\sort.cpp(313): warning C4267: “参数”: 从“size_t”转换到“int”，可能丢失数据
+  正在生成代码
+  10 of 79 functions (12.7%) were compiled, the rest were copied from previous compilation.
+    9 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  已完成代码的生成
+  SortAlgorithm.vcxproj -> C:\Users\ZouTaoTao\Desktop\SortAlgorithm\x64\Release\SortAlgorithm.exe

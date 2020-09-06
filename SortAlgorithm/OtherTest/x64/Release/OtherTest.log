@@ -1,0 +1,15 @@
+﻿  ObjectTest.cpp
+c:\users\zoutaotao\desktop\sortalgorithm\othertest\objecttest.cpp(27): error C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  d:\windows kits\10\include\10.0.16299.0\ucrt\string.h(132): note: 参见“strcpy”的声明
+c:\users\zoutaotao\desktop\sortalgorithm\othertest\objecttest.cpp(40): error C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  d:\windows kits\10\include\10.0.16299.0\ucrt\string.h(132): note: 参见“strcpy”的声明
+c:\users\zoutaotao\desktop\sortalgorithm\othertest\objecttest.cpp(48): error C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  d:\windows kits\10\include\10.0.16299.0\ucrt\string.h(132): note: 参见“strcpy”的声明
+  test.cpp
+c:\users\zoutaotao\desktop\sortalgorithm\othertest\test.cpp(60): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+c:\users\zoutaotao\desktop\sortalgorithm\othertest\test.cpp(70): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+c:\users\zoutaotao\desktop\sortalgorithm\othertest\test.cpp(71): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+c:\users\zoutaotao\desktop\sortalgorithm\othertest\test.cpp(95): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+c:\users\zoutaotao\desktop\sortalgorithm\othertest\test.cpp(98): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+c:\users\zoutaotao\desktop\sortalgorithm\othertest\test.cpp(161): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+c:\users\zoutaotao\desktop\sortalgorithm\othertest\test.cpp(168): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据

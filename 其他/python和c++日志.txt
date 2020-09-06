@@ -1,0 +1,286 @@
+2018.5.4
+qtchat 做图标 可以直接调用   void set----Qss()可以直接设置按钮等样式  append() 添加函数  qt如果想放大是按钮也要相应放大，则要进行全局布局  
+2018.5.5
+QT 3D创建 qt之中的qml创建其（Qt Quick单个）（Qt Quick Controls直接可以翻转页面 在同一个界面）
+2018.5.8
+url 代表资源位置
+2018.5.9
+qt quick application swipe  两个ui   stack 三个ui   scorll 无ui产生Item  empty自己一个 main helloworld    QStringLiteral("未命名文档");在显示中文文本
+2018.5.10
+#pragma execution_character_set("utf-8") 用QString("已运行: %1天%2时%3分%4秒").arg(day).arg(hour).arg(minute).arg(seconds)显示中文
+
+2018.5.13
+stackedWidget 添加页 以及按钮实现页面之间的转换  ui->stackedWidget->setCurrentIndex(0);语句实现页面之间的转换
+qml tabViwe  count 数量  currentIndex 页面切换  初始值为0 addTab(title,component)  第一个参数标题  第二个控件增加 
+inserttab（index，title,component）removetab（index）
+2018.5.15
+数据库 insert update delete create  添加QT +=sql
+create table students();
+insert into students values('132','罗'......);
+delete from dtudents where name = '罗'.
+update students set totalscore = totalstore +10 where deparent = '计算机';
+建立模型3个模块  qsqlquerymodel  qsqltablemodel qsqlrelationtablemodel   qlistview qtableview(二维) qtreeview在表格中显示
+
+2018.5.23
+vs添加音乐
+mmsystem.h头文件  #pragma comment(lib,"winmm.lib")静态库  mcisendstring("open 音乐路径 alias music"0,0,0);打开音乐
+mcisendstring("play music repeat",0,0,0) 播放音乐
+vs贴图
+设置图片变量 IMAGE 图片名(mm)   
+加载  loadimage(&mm,"mm.jpg",400,400)
+输出图片 putimage(0,0,&mm)
+vs随机函数
+time.h头文件 srand（（unsigned）time(NULL)）随机函数种子  rand取值 在一个较大的范围内取值
+2.18.6.2
+加载网址
+Qt版本：Qt 5.10.0  QT += webenginewidgets #include <QtWebEngineWidgets>     view = new QWebEngineView(this);
+    view->load(QUrl("http://www.baidu.com"));
+Qt绘图之QGraphicsScene QGraphicsView QGraphicsItem   QGraphicsPixmapItem是QGraphicsItem的子类 https://www.cnblogs.com/cy568searchx/p/3502242.html
+Graphics View提供了一个界面 分辨创建它们的实例：view，scene，item，然后通过各自的方法scene->addItem(item);view->setScene(scene);
+https://blog.csdn.net/q553716434/article/details/7074237
+//基本虚函数
+    QRectF boundingRect() const;
+    void paint(QPainter *painter,const QStyleOptionGraphicsItem *option,QWidget*widget);
+    QPainterPath shape() const;
+场景
+QGraphicsScene 表示Graphics View中的场景，它有以下职责： 为管理大量的items提供一个快速的接口。 传播事件到每个item。
+QGraphicsScene允许你通过调用QGraphicsScene::render()函数把部分场景送到绘图设备进行渲染。
+视图
+QGraphicsView提供了视图部件，它可视化场景中的内容。你可以联结多个视图到同一个场景，对这个相同的数据集提供几个视口。
+视口部件是一个滚动区域，它提供了滚动条以对大场景进行浏览。为了使用OpenGL,你应该调用QGraphicsView::setViewport()来把一个QGLWidget设为视口。
+视图从键盘，鼠标接收输入事件，在发送这些事件到场景之前，会对这些事件进行适当的翻译（把事件坐标转换成对应的场景坐标）。
+利用转换矩阵，QGraphicsView::matrix(),视图可变换场景的坐标系统。这允许高级的导航特性，如缩放，旋转。为了方便，QGraphicsView也提供了在视图与场景
+之间进行坐标转换的函数：QGraphicsView::mapToScene(),QGraphicsVi  ew::mapForScene()。
+2018.6.7
+//边界矩形
+  QRectF CircleItem::boundingRect() const
+  {
+      qreal penWidth = 1;
+      return QRectF(-radius - penWidth / 2, -radius - penWidth / 2,
+                    diameter + penWidth, diameter + penWidth);
+  }
+2018.6.10
+3D固定main函数开头
+    Q3DScatter *graph = new Q3DScatter();
+    QWidget *container = QWidget::createWindowContainer(graph);
+    if (!graph->hasContext()) {
+        QMessageBox msgBox;
+        msgBox.setText("Couldn't initialize the OpenGL context.");
+        msgBox.exec();
+        return -1;
+    }
+添加.pri文件
+怎么创建pri文件： https://blog.csdn.net/dbc_121/article/details/77127081  简化.pri文件内容
+第一步：用Qt新建你需要的项目（假如所在文件夹名为deploy）。
+第二步：打开项目文件夹，在这里面新建一个文件夹（名为MenuWindow）。
+第三步：在MenuWindow文件夹下新建一个pri文件（名为hello）。（怎么新建？可以新建一个文本文件，然后更改后缀名）。
+第四步：打开Qt Creator ，在你的项目的Pro文件中加入include (./MenuWindow/hello.pri)（注意include后留空格）
+第五步：运行项目，.pri文件会自动导入到你的工程下。
+
+2018.6.21
+qt读取文件夹中文路径  image = imread(fileName.toLocal8Bit().data(),1);//打开 加载一个图片
+
+2018.6.28
+python 常用的图形界面库  Tkinter wxPython Jython 
+利用after（方法进行刷新） 
+python第三方库
+https://www.lfd.uci.edu/~gohlke/pythonlibs/
+python显示中文标题
+plt.rcParams['font.sans-serif']=['SimHei']
+plt.rcParams['axes.unicode_minus'] = False
+
+2018.7.17 处理日期值数据
+import matplotlib.dates as mdate
+
+#管理时间 坐标轴
+month1 = mdate.MonthLocator()
+day1 = mdate.DateLocator()
+time1 = mdate.DateFormatter('%Y-%m')
+ax = plt.gca()
+ax.xaxis.set_major_locator(month1)
+ax.xaxis.set_major_formatter(time1)
+ax.xaxis.set_minor_locator(day1)
+
+2018.9.16 vs+qt生成图标
+三、为VS创建的Qt工程设置应用程序图标的方法： 
+1、准备ico文件，本文将其命名为：temp.ico，并放在工程根目录下 
+2、在工程根目录下，新建一个temp.rc文件，内容如下：
+IDI_ICON1 ICON DISCARDABLE "temp.ico"
+3、修改“工程名.vcxproj”文件，在：
+<Project DefaultTargets="Build" ToolsVersion="4.0"
+xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+与
+</Project>
+之间，添加：
+<ItemGroup>
+  <ResourceCompile Include="temp.rc" />
+</ItemGroup>
+
+mysql 链接qt 出现错误
+1.版本问题 查看版本
+2.若版本正确 将MySQL的lib目录下libmysql.dll拷贝到mingw49_32 和msvc2017_64的bin目录下即可
+2018.10.4
+qt vs 连接mysql insert插入中文问题
+query.exec(QString::fromLocal8Bit("insert into course values(2, '计算机', '李老师')"));//插入中文问题
+2018.10.5
+qt窗口之间数据传送 A为父窗口 B C 为兄弟子控件
+1. B到A,C到A   在B或C中设置一个信号并发射 在A中设置一个槽接收
+B->A
+//B.h
+class B{
+signals:
+    void toA([ParamList]);
+}
+//B.cpp
+B::B(){
+    emit toA([ParamList]);
+}
+//A.h
+class A{
+private:
+   B *b;
+private slots:
+   void fromB([ParamList]);
+}
+//A.cpp
+A::A(){
+b=new A;
+connect(b,SIGNAL(toA([ParamList])),this,SLOT(fromB([ParamList])));
+}
+void A::fromB([ParamList]){
+//get[ParamList]
+}
+2. B到C,C到B   发送信号的操作在对应的子窗体中,连接信号的槽的操作应在主窗口
+B->C
+//A.h{
+private:
+  B *b;
+  C *c;
+}
+//A.cpp
+A::A(){
+  b=new B;
+  c=new C;
+  connect(b,SIGNAL(toC([ParamList]),c,SLOT(fromB([ParamList])));
+}
+//B.h
+class B{
+signals:
+ void toC([ParamList]);
+}
+//B.cpp
+B::B(){
+  emit toC([ParamList]);
+}
+//C.h
+class C{
+private slots:
+  void fromB([ParamList]);
+}
+//C.cpp
+void C::fromB([ParamList]){
+//get[ParamList]
+}
+3. A到C,A到B   c++本身方式  直接在子窗口中留一个共有成员函数,让父窗口进行调用,自然就把数据传过去
+,从父窗口到子窗口( A到C,A到B)  不需要信号和槽
+A->B
+//B.h
+class B{
+public:
+   void fromA([ParamList]);
+} 
+//B.cpp
+void B::fromA([ParamList]){
+//get[ParamList]
+}
+//A.h
+class A{
+private:
+   B *b;
+}
+//A.cpp
+A:A(){
+    b=new B;
+    b->fromA([ParamList]);
+}
+
+4.数据库更新操作  对于你绑定的值 例:
+	query.prepare(QString::fromLocal8Bit("update login set pass = ? where name = ?"));//选择姓名 为关键 对其进行修改
+	mname = ui.muserlineEdit->text();
+	mpass = ui.mpasslineEdit->text();
+	query.addBindValue(mpass);//顺序 先将需要修改的绑定 在绑定 关键字
+	query.addBindValue(mname);
+	query.exec();
+5.QDir::currentPath() 和 QAppllication::appllicationDirPath()
+前者QDir::currentPath()为“盘符:\工程名\工程名”(也就是从***cpp和***文件所在的路径) ,后者 路径始终都是exe文件所在的绝对路径
+2018.10.8
+qt QObject多线程 https://blog.csdn.net/czyt1988/article/details/71194457
+int转QString  int numTotal = model->rowCount();
+	    QString s = QString::number(numTotal, 10);//十进制转换 //转换获取总数
+	    ui.sumlineEdit->setText(s);
+
+2018.10.10
+mysql 出现无序现象的时候  在select后面加入ORDER BY id ASC 使排序进行默认递增 主键的形式 QString("select * from stock_600008 limit %1,%2").arg(a1).arg(a2);
+
+2018.12.01
+'DataFrame' object has no attribute 'sort' 改为 sort_values
+
+2018.12.19
+ row = line.strip().split(",")
+TypeError: a bytes-like object is required, not 'str'
+改成
+ow = line.decode('utf8').strip().split(",")提前进行编码
+
+2018.12.24
+import matplotlib.pyplot as plt
+import warnings
+
+warnings.filterwarnings('ignore')
+plt.rcParams['font.sans-serif'] = ['SimHei']  # 用来正常显示中文标签
+plt.rcParams['axes.unicode_minus'] = False
+
+2018.12.26
+from sklearn.model_selection import cross_validate
+出现
+ImportError: cannot import name 'cross_validate'
+改成
+from sklearn.model_selection import train_test_split
+
+2018.01.08
+python读取文件时提示"UnicodeDecodeError: 'gbk' codec can't decode byte 0x80 in position 205: illegal multibyte sequence"
+FILE_OBJECT= open('order.log','r', encoding='UTF-8')或FILE_OBJECT= open('order.log','rb')
+
+261.  X[:,0]是numpy中数组的一种写法，表示对一个二维数组，取该二维数组第一维中的所有数据，第二维中取第0个数据，
+    直观来说，X[:,0]就是取所有行的第0个数据, X[:,1] 就是取所有行的第1个数据。
+    X[1,:]即取第一维中下标为1的元素的所有值
+    X[:,  m:n]，即取所有数据的第m到n-1列数据，含左不含右
+    X[:m, :]，即取所有数据的第0到m行的数据
+
+2.  shift(t)  默认为1 即当前数据值全部-1，如果为-1即当前所有值+1。但是不超过原先最大值  https://www.cnblogs.com/iamxyq/p/6283334.html
+    即数值平移
+
+3. row = (((row['Number-of-Casualties'])))#[5 5 1 ... 2 1 1]
+   row = ((np.array(row)[:])[:10])  # [1 1 1 ... 1 1 1]
+   print(np.array(row).reshape(len(row),1))#########一维列表转换为二维列表啦，俗称列表中的列表。
+[[1]
+ [1]] 转过之后可通过tolist()转成列表
+
+#c = [[1,2,3], [4,5,6], [7,8,9]]###二维转一维 
+#print([n for a in c for n in a ])    [1, 2, 3, 4, 5, 6, 7, 8, 9]  可通过np.matrix()转成矩阵
+
+获取制定多列
+test_data = pd.read_csv('LZ2015cause.csv')
+#Road-Surface,Lighting-Conditions,Weather-Cnditions,Sex-of-Casualty,Age-of-Casualty,Number-of-Casualties
+test_x = ((test_data[["Road-Surface","Lighting-Conditions","Weather-Conditions"
+          ,"Sex-of-Casualty","Age-of-Casualty"]]))####获取需要的列 ###和 test_x输出一样数据,"Number-of-Casualties"
+
+
+pycharm ：Ctrl+鼠标点击 进入函数声明定义
+
+
+.csv文件直接读取  plot绘图  可以直接绘制多列  不用将数据进行转换
+20190803
+QDialog 出现不能进行栅格布局状况  setSizeGripEnabled()。 查看这个函数，设置控件有效
+
+#2019.08.17
+python 循环for   https://blog.csdn.net/aic1999/article/details/79752864

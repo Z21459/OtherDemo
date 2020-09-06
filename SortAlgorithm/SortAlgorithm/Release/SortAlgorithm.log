@@ -1,0 +1,8 @@
+﻿  main.cpp
+c:\users\zoutaotao\desktop\sortalgorithm\sortalgorithm\main.cpp(290): warning C4018: “<”: 有符号/无符号不匹配
+  正在生成代码
+  1 of 77 functions ( 1.3%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  已完成代码的生成
+  SortAlgorithm.vcxproj -> C:\Users\ZouTaoTao\Desktop\SortAlgorithm\Release\SortAlgorithm.exe

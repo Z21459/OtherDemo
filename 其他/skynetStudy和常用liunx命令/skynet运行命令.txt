@@ -1,0 +1,58 @@
+
+skynet下面的example和bin 是自己写的代码
+
+在skynet下面运行    ./skynet ./bin/cluster1/config/config  ---确定目录文件
+	 ./skynet ./bin/cluster2/config/config
+ 	./skynet ./bin/master/config/config
+
+cd  ./zttskynet/skynet/bin  --进入文件夹
+
+//路径问题  获取源文件的路径
+package.path = "./example/test/sd.lua"..";..\\?.lua"
+
+package.cpath = "./bin/testinject/?.so" --在当前目录下面用c生成的.so文件调用  将生成的.so 文件移动到skynet/luaclib下，不然会出现索引错误
+--/root/ztt1skynet/skynet/bin/testinject/mylib.so
+local mylib = require("mylib")  --对应于teste.c中的包名
+
+whereis 
+which --查看路径
+find / -type f -name "*.so" --查看文件路径
+gcc testlua.cpp -fPIC -shared -o mytestlib.so --c生成.so
+top 查看内存等情况
+kill -s 9 端口号
+netstat -apt --查看端口号
+
+
+mkdir 
+
+touch
+
+rm -rf  
+
+cd 
+
+ll -a
+
+ls
+
+压缩文件夹传递   --压缩和解压
+tar -zcvf filename.tar.gz filename
+tar -zxvf filename.tar.gz
+
+rz  windows向linux传输文件
+sz linux向windows传输文件
+
+cp -r ./ztt1skynet/skynet/bin/testinject/mylib.so ./ztt1skynet/skynet/luaclib--移动.so文件到指定文件夹下面
+cp -r ./zttskynet/skynet/bin/testinject ./ztt1skynet/skynet   复制文件夹到指定文件下面 想要复制需要在根目录下进行操作
+mv zhidao.txt baidu.txt 重命名
+
+
+rlwrap nc 127.0.0.1 8000 进入控制台 端口号可以自己定义  必需启动newservice("debug_console",8000)
+首先进入控制台，然后输入热更指令--inject命令的难点是，这个要注入的lua代码该怎么写。
+inject :00000008  ./bin/testinject/inject_test.lua ---实现inject热更  :00000008 是address
+
+--20200424 
+debuginject address d(i)(di) filename---根据选择d(i)(di)选择debug 、inject 还是同时进入
+
+--inject热更的实现是
+

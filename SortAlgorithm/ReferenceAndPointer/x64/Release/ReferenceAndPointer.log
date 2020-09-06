@@ -1,0 +1,6 @@
+﻿  StringOperator.cpp
+c:\users\zoutaotao\desktop\sortalgorithm\referenceandpointer\stringoperator.cpp(10): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+c:\users\zoutaotao\desktop\sortalgorithm\referenceandpointer\stringoperator.cpp(13): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+c:\users\zoutaotao\desktop\sortalgorithm\referenceandpointer\stringoperator.cpp(78): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+c:\users\zoutaotao\desktop\sortalgorithm\referenceandpointer\stringoperator.cpp(110): warning C4267: “=”: 从“size_t”转换到“int”，可能丢失数据
+LINK : fatal error LNK1561: 必须定义入口点

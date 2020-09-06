@@ -1,0 +1,9 @@
+﻿  main.cpp
+e:\deskfile\file\readconfig\readconfig\main.cpp(5): warning C4005: “MAX_PATH”: 宏重定义
+  d:\windows kits\10\include\10.0.16299.0\shared\minwindef.h(60): note: 参见“MAX_PATH”的前一个定义
+  正在生成代码
+  10 of 10 functions (100.0%) were compiled.
+    9 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  已完成代码的生成
+  ReadConfig.vcxproj -> E:\DeskFile\File\ReadConfig\x64\Release\ReadConfig.exe

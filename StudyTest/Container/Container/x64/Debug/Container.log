@@ -1,0 +1,7 @@
+﻿  main5.cpp
+e:\worktestcode\container\container\main5.cpp(72): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+e:\worktestcode\container\container\main5.cpp(89): warning C4244: “初始化”: 从“__int64”转换到“int”，可能丢失数据
+e:\worktestcode\container\container\main5.cpp(90): warning C4244: “初始化”: 从“__int64”转换到“int”，可能丢失数据
+e:\worktestcode\container\container\main5.cpp(132): warning C4244: “初始化”: 从“__int64”转换到“int”，可能丢失数据
+e:\worktestcode\container\container\main5.cpp(44): warning C4715: “priceComparision”: 不是所有的控件路径都返回值
+  Container.vcxproj -> E:\WorkTestCode\Container\x64\Debug\Container.exe

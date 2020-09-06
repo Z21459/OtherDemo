@@ -1,0 +1,56 @@
+本地到git上  把要放的放在一个文件夹里面上传
+git init
+git remote add origin https://github.com/Z21459/OtherDemo.git
+git pull --rebase origin master
+git add Test
+git commit -m 'first commit'
+git push origin master
+
+如果出现error: failed to push some refs to 'https://github.com/Z21459/OtherDemo.git'   
+使用命令 git push -u origin master -f
+
+git到本地
+git clone https://github.com/Z21459/OtherDemo.git//进入对应的文件夹
+
+
+
+
+
+在对应项目目录下打开命令提示符
+
+git branch -a      查看所有本地和远程分支
+
+git checkout -b [newBranch]     建立本地分支newBranch
+
+git push origin [newBranch] :[newBranch]    创建远程分支newBranch
+
+git push --set-upstream origin [newBranch]      建立联系
+
+
+
+
+
+git init  :查看仓库状态
+
+git log  :查看历史记录
+
+git reset -hard HEAD^ 或者  git reset -hard HEAD~  ：回退到上一个版本
+
+git rm XX  :删除XX文件
+
+git clone https://github.com/lizeyang18/test.git  :从Github仓库克隆
+
+git checkout -b dev  :创建dev分支并切换到dev分支上
+
+git branch  :查看当前所有分支
+
+git checkout master  :切换回master分支
+
+git merge dev  :在当前的分支上合并dev分支
+
+git branch -d dev  :删除dev分支
+
+git remote  :查看远程库信息
+
+git remote -v  :查看远程库详细信息
+
