@@ -1,0 +1,4 @@
+﻿  数据结构趣题.cpp
+e:\gittestdemo\妙趣横生的算法\妙趣横生的算法\数据结构趣题.cpp(257): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+e:\gittestdemo\妙趣横生的算法\妙趣横生的算法\数据结构趣题.cpp(288): warning C4267: “初始化”: 从“size_t”转换到“int”，可能丢失数据
+  妙趣横生的算法.vcxproj -> E:\GitTestDemo\妙趣横生的算法\x64\Debug\妙趣横生的算法.exe

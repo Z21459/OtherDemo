@@ -225,6 +225,14 @@ public:
 	void fun2() { cout << "3"; }
 };
 
+class Temp
+{
+public:
+	Temp(int xx,int yy):x(xx),y(yy){}
+private:
+	int const x;
+	int const y;
+};
 
 int main()
 {
@@ -260,8 +268,6 @@ int main()
 	//	cout << iter->first;
 	//}
 
-
-
 	//string str = "abc ztt";
 	//recvStr(str);
 	//std::cout << str;
@@ -277,26 +283,28 @@ int main()
 	//int diff = pe - pt;
 	//cout << *pt << " " << *pe << " "<<diff;
 
-	A *a = new A();//结构体 可以多态
-	if (a == nullptr) cout << "a null";
-	else
-	{
-		a->fun1();
-		cout << " ";
-		a = new B();//指向子类
-		a->fun1();
-		cout << " ";
-	}
+	//A *a = new A();//结构体 可以多态
+	//if (a == nullptr) cout << "a null";
+	//else
+	//{
+	//	a->fun1();
+	//	cout << " ";
+	//	a = new B();//指向子类
+	//	a->fun1();
+	//	cout << " ";
+	//}
+	//A a1;
+	//a1.fun1();
+	//B b1;
+	//a1 = b1;
+	//cout << " ";
+	//a1.fun1();
+	////b1.fun1();
 
 
-	A a1;
-	a1.fun1();
-	B b1;
-	a1 = b1;
-	cout << " ";
-	a1.fun1();
-	//b1.fun1();
-
+	vector<Temp> int_vec;
+	int_vec.push_back(Temp(1, 2));
+	cout << endl;
 
 	system("pause");
 	return 0;
