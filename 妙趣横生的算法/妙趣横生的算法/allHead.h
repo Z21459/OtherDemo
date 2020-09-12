@@ -13,6 +13,7 @@
 #include <mutex>
 #include <algorithm>
 #include <time.h>
+#include<cmath>
 #include <fstream>
 #include <dos.h>
 #include <Windows.h>//sleep

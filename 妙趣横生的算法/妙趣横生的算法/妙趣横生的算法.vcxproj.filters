@@ -33,6 +33,9 @@
     <ClCompile Include="数据结构趣题.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
+    <ClCompile Include="数值计算.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="allHead.h">

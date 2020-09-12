@@ -1,14 +1,21 @@
 #include"allHead.h"
+#include<conio.h>
+#include <windows.graphics.h>
 
 /*
 多用数据结构 提高编程水平 和解决问题的能力
 1.顺序表逆置
-2.动态数组排序  选择方式 --链表 
+2.动态数组排序  选择方式 --链表   --链表指针交换 可以多设置几个指针  用以交换使用
 3.原表空间 进行归并
 4.约瑟夫问题  创建一个循环链表
 5.二进制 转八进制
 6.判断回文 ---可以用一个链表 一个队列
 7.括号匹配问题 
+8.判断二叉树是否是完全二叉树
+9.打印特殊三角形
+10.使用字符串来计算任意长度的整数相加  使用栈 两个输入的栈(加法从低位开始)  一个输出的栈
+
+
 */
 
 //顺序表逆置
@@ -313,10 +320,66 @@ void onKuoHao()
 	if (st.empty()) cout << "匹配\n";
 	else cout << "不匹配\n";
 }
+//打印特殊三角形
+void onSize(string &str, int &len)
+{
+	string temp = "";
+	for (int i = 0; i < len - 1; i++)
+	{
+		if (str[i] == str[i + 1])
+		{
+			temp += '+';
+		}
+		else
+		{
+			temp += '-';
+		}
+	}
+	int t_len = temp.length();
+	str = temp;
+	len = t_len;
+}
+void onPrintTri(string str)
+{
+	//string str = "++-+-++";
+	int len = str.length();
+	vector<char> vec;
+	for (int i = 0; i < len; i++)
+	{
+		cout << str[i] << " ";
+	}
+	cout << endl;
+	while (len >1)
+	{
+		onSize(str, len);
+		for (int i = 0; i < len; i++)
+		{
+			cout << str[i] << " ";
+		}
+		cout << endl;
+	}
+	cout << str[0];
+	/*if(len == 1)
+	for (int i = 0; i < len-1; i++)
+	{
+		if (str[i] == str[i + 1])
+		{
+			vec.push_back('-');
+		}
+		else
+		{
+			vec.push_back('+');
+		}
+	}
+	if (vec.size() == 1)//只有一个了  退出
+		cout << vec[0];*/
+
+}
 
 
 
-int main()
+
+int mainq()
 {
 
 	//onShunXuResever();
@@ -324,8 +387,10 @@ int main()
 	//onCreateCricleList();
 
 	//onTwoToEight();
-	onKuoHao();
-
+	//onKuoHao();
+	//string str;//
+	//cin >> str;
+	//onPrintTri(str);
 
 
 	system("pause");

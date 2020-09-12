@@ -5,7 +5,7 @@
 #-------------------------------------------------
 
 QT       += core gui
-
+QT += network  # 添加这个文件 否者newsocket会出现无法解析2019  2001
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 RC_ICONS = Pigico.ico#添加图标
 TARGET = ClientSocketLinux
@@ -27,17 +27,25 @@ DEFINES += QT_DEPRECATED_WARNINGS
 CONFIG += c++11
 
 SOURCES += \
+        clientwidget.cpp \
+        clientwidget.cpp \
         main.cpp \
-        mainwindow.cpp
+        mainwindow.cpp \
+        serverwidget.cpp
 
 HEADERS += \
+        clientwidget.h \
         http.h \
         mainwindow.h \
+        serverwidget.h \
+        serverwidget.h \
         tcp.h \
         udp.h
 
 FORMS += \
-        mainwindow.ui
+        clientwidget.ui \
+        mainwindow.ui \
+        serverwidget.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

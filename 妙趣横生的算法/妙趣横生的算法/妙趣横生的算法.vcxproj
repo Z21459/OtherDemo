@@ -116,6 +116,7 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="实例解析.cpp" />
+    <ClCompile Include="数值计算.cpp" />
     <ClCompile Include="数学趣题.cpp" />
     <ClCompile Include="数学趣题1.cpp" />
     <ClCompile Include="数学趣题2.cpp" />
