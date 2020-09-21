@@ -234,7 +234,7 @@ private:
 	int const y;
 };
 
-int main()
+int mainss()
 {
 
 	//const char* str = "abcde";
